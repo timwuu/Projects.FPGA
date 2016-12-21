@@ -1,0 +1,566 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus II License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 14.1.0 Internal Build 89 06/18/2014 SJ Full Version
+# Date created = 13:40:09  June 26, 2014
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		golden_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C6GES
+set_global_assignment -name TOP_LEVEL_ENTITY golden_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:40:09  JUNE 26, 2014"
+set_global_assignment -name LAST_QUARTUS_VERSION 15.0.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 2
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+
+set_location_assignment PIN_D9 -to max10_resetn
+set_location_assignment PIN_J10 -to clk50m_max10
+set_location_assignment PIN_E10 -to clk100m_lpddr2
+
+set_location_assignment PIN_C3 -to user_led[0]
+set_location_assignment PIN_C4 -to user_led[1]
+set_location_assignment PIN_C5 -to user_led[2]
+set_location_assignment PIN_D5 -to user_led[3]
+set_location_assignment PIN_C7 -to user_led[4]
+
+set_location_assignment PIN_R20 -to user_pb[0]
+set_location_assignment PIN_Y20 -to user_pb[1]
+set_location_assignment PIN_Y21 -to user_pb[2]
+set_location_assignment PIN_U20 -to user_pb[3]
+
+set_location_assignment PIN_R18 -to user_dipsw[0]
+set_location_assignment PIN_T19 -to user_dipsw[1]
+set_location_assignment PIN_T18 -to user_dipsw[2]
+set_location_assignment PIN_U19 -to user_dipsw[3]
+set_location_assignment PIN_G4 -to user_dipsw[4]
+set_location_assignment PIN_F5 -to user_dipsw[5]
+
+set_location_assignment PIN_A17 -to user_io[0]
+set_location_assignment PIN_B19 -to user_io[1]
+set_location_assignment PIN_E16 -to user_io[2]
+set_location_assignment PIN_C19 -to user_io[3]
+set_location_assignment PIN_F16 -to user_io[4]
+set_location_assignment PIN_A19 -to user_io[5]
+set_location_assignment PIN_A20 -to user_io[6]
+set_location_assignment PIN_C18 -to user_io[7]
+set_location_assignment PIN_C17 -to user_io[8]
+set_location_assignment PIN_D17 -to user_io[9]
+
+set_location_assignment PIN_A6 -to pmoda_d[0]
+set_location_assignment PIN_E8 -to pmoda_d[1]
+set_location_assignment PIN_B4 -to pmoda_d[2]
+set_location_assignment PIN_A5 -to pmoda_d[3]
+set_location_assignment PIN_B7 -to pmoda_d[4]
+set_location_assignment PIN_E9 -to pmoda_d[5]
+set_location_assignment PIN_A4 -to pmoda_d[6]
+set_location_assignment PIN_B5 -to pmoda_d[7]
+set_location_assignment PIN_C8 -to pmodb_d[0]
+set_location_assignment PIN_D8 -to pmodb_d[1]
+set_location_assignment PIN_A3 -to pmodb_d[2]
+set_location_assignment PIN_A2 -to pmodb_d[3]
+set_location_assignment PIN_B3 -to pmodb_d[4]
+set_location_assignment PIN_C2 -to pmodb_d[5]
+set_location_assignment PIN_B1 -to pmodb_d[6]
+set_location_assignment PIN_B2 -to pmodb_d[7]
+
+set_location_assignment PIN_A8 -to flash_csn
+set_location_assignment PIN_B8 -to flash_resetn
+set_location_assignment PIN_A9 -to flash_clk
+set_location_assignment PIN_C9 -to flash_d[0]
+set_location_assignment PIN_C10 -to flash_d[1]
+set_location_assignment PIN_C11 -to flash_d[2]
+set_location_assignment PIN_A7 -to flash_d[3]
+
+set_location_assignment PIN_E11 -to usb_clk
+set_location_assignment PIN_H4 -to usb_data[0]
+set_location_assignment PIN_F1 -to usb_data[1]
+set_location_assignment PIN_E4 -to usb_data[2]
+set_location_assignment PIN_E3 -to usb_data[3]
+set_location_assignment PIN_G1 -to usb_data[4]
+set_location_assignment PIN_H1 -to usb_data[5]
+set_location_assignment PIN_H3 -to usb_data[6]
+set_location_assignment PIN_J3 -to usb_data[7]
+set_location_assignment PIN_E1 -to usb_addr[0]
+set_location_assignment PIN_G3 -to usb_addr[1]
+set_location_assignment PIN_F4 -to usb_full
+set_location_assignment PIN_F3 -to usb_empty
+set_location_assignment PIN_D2 -to usb_scl
+set_location_assignment PIN_D3 -to usb_sda
+set_location_assignment PIN_K2 -to usb_resetn
+set_location_assignment PIN_F2 -to usb_oen
+set_location_assignment PIN_J1 -to usb_wrn
+set_location_assignment PIN_J4 -to usb_rdn
+
+set_location_assignment PIN_D6 -to hdmi_video_clk
+set_location_assignment PIN_J12 -to hdmi_video_din[0]
+set_location_assignment PIN_D13 -to hdmi_video_din[1]
+set_location_assignment PIN_E12 -to hdmi_video_din[2]
+set_location_assignment PIN_E13 -to hdmi_video_din[3]
+set_location_assignment PIN_D12 -to hdmi_video_din[4]
+set_location_assignment PIN_B16 -to hdmi_video_din[5]
+set_location_assignment PIN_A16 -to hdmi_video_din[6]
+set_location_assignment PIN_C15 -to hdmi_video_din[7]
+set_location_assignment PIN_B14 -to hdmi_video_din[8]
+set_location_assignment PIN_A14 -to hdmi_video_din[9]
+set_location_assignment PIN_A13 -to hdmi_video_din[10]
+set_location_assignment PIN_B12 -to hdmi_video_din[11]
+set_location_assignment PIN_A12 -to hdmi_video_din[12]
+set_location_assignment PIN_C12 -to hdmi_video_din[13]
+set_location_assignment PIN_A11 -to hdmi_video_din[14]
+set_location_assignment PIN_B11 -to hdmi_video_din[15]
+set_location_assignment PIN_A10 -to hdmi_video_din[16]
+set_location_assignment PIN_C14 -to hdmi_video_din[17]
+set_location_assignment PIN_E14 -to hdmi_video_din[18]
+set_location_assignment PIN_D14 -to hdmi_video_din[19]
+set_location_assignment PIN_C13 -to hdmi_video_din[20]
+set_location_assignment PIN_E15 -to hdmi_video_din[21]
+set_location_assignment PIN_F15 -to hdmi_video_din[22]
+set_location_assignment PIN_D15 -to hdmi_video_din[23]
+set_location_assignment PIN_H13 -to hdmi_hsync
+set_location_assignment PIN_H14 -to hdmi_vsync
+set_location_assignment PIN_J13 -to hdmi_video_data_en
+set_location_assignment PIN_A18 -to hdmi_intr
+set_location_assignment PIN_B17 -to hdmi_sda
+set_location_assignment PIN_C16 -to hdmi_scl
+
+set_location_assignment PIN_J22 -to lpddr2_ca[0]
+set_location_assignment PIN_J21 -to lpddr2_ca[1]
+set_location_assignment PIN_F22 -to lpddr2_ca[2]
+set_location_assignment PIN_H21 -to lpddr2_ca[3]
+set_location_assignment PIN_H22 -to lpddr2_ca[4]
+set_location_assignment PIN_D22 -to lpddr2_ca[5]
+set_location_assignment PIN_C22 -to lpddr2_ca[6]
+set_location_assignment PIN_E22 -to lpddr2_ca[7]
+set_location_assignment PIN_A21 -to lpddr2_ca[8]
+set_location_assignment PIN_B22 -to lpddr2_ca[9]
+set_location_assignment PIN_N19 -to lpddr2_dm[0]
+set_location_assignment PIN_J15 -to lpddr2_dm[1]
+set_location_assignment PIN_N18 -to lpddr2_dq[0]
+set_location_assignment PIN_N20 -to lpddr2_dq[1]
+set_location_assignment PIN_M20 -to lpddr2_dq[2]
+set_location_assignment PIN_M14 -to lpddr2_dq[3]
+set_location_assignment PIN_M18 -to lpddr2_dq[4]
+set_location_assignment PIN_M15 -to lpddr2_dq[5]
+set_location_assignment PIN_L20 -to lpddr2_dq[6]
+set_location_assignment PIN_L18 -to lpddr2_dq[7]
+set_location_assignment PIN_K20 -to lpddr2_dq[8]
+set_location_assignment PIN_K19 -to lpddr2_dq[9]
+set_location_assignment PIN_K18 -to lpddr2_dq[10]
+set_location_assignment PIN_H19 -to lpddr2_dq[11]
+set_location_assignment PIN_H20 -to lpddr2_dq[12]
+set_location_assignment PIN_H18 -to lpddr2_dq[13]
+set_location_assignment PIN_J14 -to lpddr2_dq[14]
+set_location_assignment PIN_J18 -to lpddr2_dq[15]
+set_location_assignment PIN_K15 -to lpddr2_dqs1n
+set_location_assignment PIN_K14 -to lpddr2_dqs1
+set_location_assignment PIN_L15 -to lpddr2_dqs0n
+set_location_assignment PIN_L14 -to lpddr2_dqs0
+set_location_assignment PIN_E21 -to lpddr2_cke
+set_location_assignment PIN_G22 -to lpddr2_csn
+set_location_assignment PIN_E18 -to lpddr2_ckn
+set_location_assignment PIN_D18 -to lpddr2_ck
+
+set_location_assignment PIN_R1 -to mipi_tx_clk_hs_n
+set_location_assignment PIN_R2 -to mipi_tx_clk_hs_p
+set_location_assignment PIN_P1 -to mipi_tx_data_0_hs_n
+set_location_assignment PIN_N1 -to mipi_tx_data_0_hs_p
+set_location_assignment PIN_T1 -to mipi_tx_data_1_hs_n
+set_location_assignment PIN_T2 -to mipi_tx_data_1_hs_p
+set_location_assignment PIN_U1 -to mipi_tx_data_2_hs_n
+set_location_assignment PIN_V1 -to mipi_tx_data_2_hs_p
+set_location_assignment PIN_W1 -to mipi_tx_data_3_hs_n
+set_location_assignment PIN_W2 -to mipi_tx_data_3_hs_p
+
+set_location_assignment PIN_Y1  -to mipi_tx_clk_lp_n
+set_location_assignment PIN_Y2  -to mipi_tx_clk_lp_p
+set_location_assignment PIN_V4  -to mipi_tx_data_0_lp_n
+set_location_assignment PIN_V5  -to mipi_tx_data_0_lp_p
+set_location_assignment PIN_AB2 -to mipi_tx_data_1_lp_n
+set_location_assignment PIN_AB3 -to mipi_tx_data_1_lp_p
+set_location_assignment PIN_AA5 -to mipi_tx_data_2_lp_n
+set_location_assignment PIN_AB5 -to mipi_tx_data_2_lp_p
+set_location_assignment PIN_AB6 -to mipi_tx_data_3_lp_n
+set_location_assignment PIN_AB7 -to mipi_tx_data_3_lp_p
+
+set_location_assignment PIN_P11 -to ov10640_rx_clk_hs_p
+set_location_assignment PIN_R11 -to ov10640_rx_clk_hs_n
+set_location_assignment PIN_AB21 -to ov10640_rx_data_0_hs_n
+set_location_assignment PIN_AA20 -to ov10640_rx_data_0_hs_p
+set_location_assignment PIN_AB19 -to ov10640_rx_data_1_hs_n
+set_location_assignment PIN_AB20 -to ov10640_rx_data_1_hs_p
+set_location_assignment PIN_AB17 -to ov10640_rx_data_2_hs_n
+set_location_assignment PIN_AB18 -to ov10640_rx_data_2_hs_p
+set_location_assignment PIN_AB16 -to ov10640_rx_data_3_hs_n
+set_location_assignment PIN_AA16 -to ov10640_rx_data_3_hs_p
+
+set_location_assignment PIN_T21  -to ov10640_rx_clk_lp_p
+set_location_assignment PIN_T22  -to ov10640_rx_clk_lp_n
+set_location_assignment PIN_N22  -to ov10640_rx_data_0_lp_n
+set_location_assignment PIN_P21  -to ov10640_rx_data_0_lp_p
+set_location_assignment PIN_V22  -to ov10640_rx_data_1_lp_n
+set_location_assignment PIN_V21  -to ov10640_rx_data_1_lp_p
+set_location_assignment PIN_W22  -to ov10640_rx_data_2_lp_n
+set_location_assignment PIN_Y22  -to ov10640_rx_data_2_lp_p
+set_location_assignment PIN_AA22 -to ov10640_rx_data_3_lp_n
+set_location_assignment PIN_AA21 -to ov10640_rx_data_3_lp_p
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to max10_resetn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to clk50m_max10
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to clk100m_lpddr2
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_led[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_led[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_led[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_led[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_led[4]
+
+set_instance_assignment -name IO_STANDARD "1.2 V" -to user_pb[0]
+set_instance_assignment -name IO_STANDARD "1.2 V" -to user_pb[1]
+set_instance_assignment -name IO_STANDARD "1.2 V" -to user_pb[2]
+set_instance_assignment -name IO_STANDARD "1.2 V" -to user_pb[3]
+
+set_instance_assignment -name IO_STANDARD "1.2 V" -to user_dipsw[0]
+set_instance_assignment -name IO_STANDARD "1.2 V" -to user_dipsw[1]
+set_instance_assignment -name IO_STANDARD "1.2 V" -to user_dipsw[2]
+set_instance_assignment -name IO_STANDARD "1.2 V" -to user_dipsw[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_dipsw[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_dipsw[5]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to user_io[9]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmoda_d[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmoda_d[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmoda_d[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmoda_d[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmoda_d[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmoda_d[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmoda_d[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmoda_d[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmodb_d[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmodb_d[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmodb_d[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmodb_d[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmodb_d[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmodb_d[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmodb_d[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to pmodb_d[7]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to flash_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to flash_d[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to flash_d[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to flash_d[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to flash_d[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to flash_csn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to flash_resetn
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_data[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_data[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_data[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_data[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_data[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_data[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_data[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_data[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_addr[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_addr[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_wrn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_sda
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_scl
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_rdn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_full
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_resetn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_oen
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to usb_empty
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_scl
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_sda
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_din[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_video_data_en
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_hsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_intr
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to hdmi_vsync
+
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[0]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[0]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[1]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[1]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[2]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[2]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[3]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[3]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[4]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[4]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[5]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[5]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[6]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[6]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[7]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[7]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[8]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[8]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[9]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[9]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[10]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[10]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[11]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[11]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[12]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[12]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[13]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[13]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[14]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[14]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dq[15]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dq[15]
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V HSUL" -to lpddr2_dqs1
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dqs1
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V HSUL" -to lpddr2_dqs0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dqs0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V HSUL" -to lpddr2_ck
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ck
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[0]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[1]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[2]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[3]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[4]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[5]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[6]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[7]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[8]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_ca[9]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_csn
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_cke
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dm[0]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dm[0]
+set_instance_assignment -name IO_STANDARD "1.2-V HSUL" -to lpddr2_dm[1]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dm[1]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs0 -to lpddr2_dq[0]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs0 -to lpddr2_dq[1]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs0 -to lpddr2_dq[2]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs0 -to lpddr2_dq[3]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs0 -to lpddr2_dq[4]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs0 -to lpddr2_dq[5]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs0 -to lpddr2_dq[6]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs0 -to lpddr2_dq[7]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs1 -to lpddr2_dq[8]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs1 -to lpddr2_dq[9]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs1 -to lpddr2_dq[10]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs1 -to lpddr2_dq[11]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs1 -to lpddr2_dq[12]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs1 -to lpddr2_dq[13]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs1 -to lpddr2_dq[14]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs1 -to lpddr2_dq[15]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs0 -to lpddr2_dm[0]
+set_instance_assignment -name DQ_GROUP 9 -from lpddr2_dqs1 -to lpddr2_dm[1]
+set_instance_assignment -name DM_PIN ON -to lpddr2_dm[0]
+set_instance_assignment -name DM_PIN ON -to lpddr2_dm[1]
+
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_clk_hs_p
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_clk_hs_n
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_data_0_hs_n
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_data_0_hs_p
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_data_1_hs_p
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_data_1_hs_n
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_data_2_hs_p
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_data_2_hs_n
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_data_3_hs_p
+set_instance_assignment -name IO_STANDARD "1.8-V HSTL CLASS I" -to mipi_tx_data_3_hs_n
+
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_clk_lp_p
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_clk_lp_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_data_0_lp_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_data_0_lp_p
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_data_1_lp_p
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_data_1_lp_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_data_2_lp_p
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_data_2_lp_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_data_3_lp_p
+set_instance_assignment -name IO_STANDARD "2.5 V" -to mipi_tx_data_3_lp_n
+
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_clk_hs_p
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_clk_hs_n
+set_instance_assignment -name IO_STANDARD LVDS     -to ov10640_rx_clk_hs_p
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_data_3_hs_p
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_data_3_hs_n
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_data_2_hs_p
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_data_2_hs_n
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_data_1_hs_p
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_data_1_hs_n
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_data_0_hs_p
+#set_instance_assignment -name IO_STANDARD "2.5 V" -to ov10640_rx_data_0_hs_n
+
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_clk_lp_p
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_clk_lp_n
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_data_3_lp_p
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_data_3_lp_n
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_data_2_lp_p
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_data_2_lp_n
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_data_1_lp_p
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_data_1_lp_n
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_data_0_lp_p
+set_instance_assignment -name IO_STANDARD "1.2-V HSTL CLASS I" -to ov10640_rx_data_0_lp_n
+
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V HSUL" -to lpddr2_dqs0n
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dqs0n
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V HSUL" -to lpddr2_dqs1n
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_dqs1n
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.2-V HSUL" -to lpddr2_ckn
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ckn
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[0]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[1]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[2]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[3]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[4]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[5]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[6]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[7]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[8]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_ca[9]
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_csn
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 34 OHM WITH CALIBRATION" -to lpddr2_cke
+set_instance_assignment -name CKN_CK_PAIR ON -from lpddr2_ckn -to lpddr2_ck
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[0]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[1]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[2]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[3]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[4]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[5]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[6]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[7]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[8]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[9]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[10]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[11]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[12]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[13]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[14]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dq[15]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dm[0]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dm[1]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dqs0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dqs1
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dqs0n
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_dqs1n
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[0]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[1]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[2]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[3]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[4]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[5]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[6]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[7]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[8]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ca[9]
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_csn
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_cke
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ck
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to lpddr2_ckn
+
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name UNIPHY_TEMP_VER_CODE 2133383589
+set_global_assignment -name ECO_REGENERATE_REPORT ON
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS ON
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC_FOR_AREA ON
+set_global_assignment -name ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ON
+set_global_assignment -name ROUTER_TIMING_OPTIMIZATION_LEVEL MAXIMUM
+set_global_assignment -name QII_AUTO_PACKED_REGISTERS NORMAL
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_global_assignment -name ROUTER_CLOCKING_TOPOLOGY_ANALYSIS ON
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+set_global_assignment -name SMART_RECOMPILE OFF
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name ENABLE_OCT_DONE ON
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "DUAL IMAGES"
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name VERILOG_FILE golden_top.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
