@@ -1,0 +1,10 @@
+*.DS_Store
+USB_JTAG/firmware/MPLAB.X/build
+USB_JTAG/firmware/MPLAB.X/dist
+USB_JTAG/utilities
+USB_JTAG/firmware/src/log
+
+USB_JTAG/firmware/MPLAB.X/USB_JTAG.zip
+*.err
+*.i
+*.obj
